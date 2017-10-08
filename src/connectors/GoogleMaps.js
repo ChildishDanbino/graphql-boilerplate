@@ -21,7 +21,7 @@ class GoogleMapsConnector {
 					uri: url,
 					headers: {
 						key: this.mapsApiKey,
-						'user-agent': 'mm-sysco-graph'
+						'user-agent': 'graph-boil'
 					}
 				})).then(({ body }) => {
 					resultCache[url] = {
@@ -36,7 +36,7 @@ class GoogleMapsConnector {
 	}
 
 	get(path) {
-		const mapsPath = `${config.googleMapsRootUrl}${path}&key=${this.mapsApiKey}`;
+		const mapsPath = `${config.rootUrls.googleMapsRootUrl}${path}&key=${this.mapsApiKey}`;
 		return this.loader.load(mapsPath);
 	}
 }
