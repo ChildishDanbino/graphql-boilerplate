@@ -1,0 +1,37 @@
+{
+	"name": "graphql-boilerplate",
+	"version": "0.0.1",
+	"description": "GraphQL Boilerplate for Koa",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "ENV=dev nodemon ./src/index.js --ignore package.json",
+		"test": "jest",
+		"lint": "eslint src --ext .js --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Daadler6/graphql-boilerplate"
+	},
+	"keywords": [
+		"react",
+		"graphQL",
+		"apollo"
+	],
+	"author": "Daniel Adler",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Daadler6/graphql-boilerplate/issues"
+	},
+	"homepage": "https://github.com/Daadler6/graphql-boilerplate",
+	"dependencies": {
+		"apollo-server-koa": "^1.1.3",
+		"dataloader": "^1.3.0",
+		"eslint": "^4.8.0",
+		"eslint-plugin-graphql": "^1.4.0-1",
+		"graphql": "^0.11.7",
+		"koa": "^2.3.0",
+		"koa-bodyparser": "^4.2.0",
+		"koa-router": "^7.2.1",
+		"request-promise": "^4.2.2"
+	}
+}
