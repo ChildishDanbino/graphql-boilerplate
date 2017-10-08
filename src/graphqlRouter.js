@@ -3,8 +3,8 @@ const { makeExecutableSchema } = require('graphql-tools');
 const { graphqlKoa } = require('graphql-server-koa');
 const { resolvers, typeDefs } = require('./schema');
 
-import { credentials } from '../config';
-import { GoogleMapsConnector } from './connectors';
+const { credentials } = require('../config');
+const { GoogleMapsConnector } = require('./connectors');
 
 const router = new Router();
 const schema = makeExecutableSchema({
