@@ -9,8 +9,8 @@ const typeDefs = `
 `;
 
 const query = `
-  # Gets Coorindates given an Address
-  getCoordinates(
+  # Gets Coordinates given an Address
+  coordinates(
     adddressLine1: String!
     city: String!
     state: String!
@@ -20,7 +20,7 @@ const query = `
 const resolvers = {
 	Query: {
 		coordinates(_root, locationInfo , { googleMapsConnector }) {
-			return coordinates.getCoorindates(locationInfo, googleMapsConnector);
+			return coordinates.getCoordinates(locationInfo, googleMapsConnector);
 		}
 	}
 };

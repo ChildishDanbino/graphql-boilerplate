@@ -12,11 +12,14 @@ const rootSchema = `
   }
 `;
 
-const resolvers = coordinates.resolvers;
+const resolvers = deepmerge.all([
+	{},
+	coordinates.resolvers
+]);
 
 const typeDefs = [
 	rootSchema,
-	coordinates.typeDefs,
+	coordinates.typeDefs
 ];
 
 exports.resolvers = resolvers;

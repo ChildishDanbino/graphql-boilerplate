@@ -1,10 +1,13 @@
+const { formatAddress } = require('../helpers');
+
 
 /**
  * Gets GPS Coordinates from Google Maps API
  */
-async function getCoorindates(locationInfo, googleMapsConnector) {
-	//const formattedAddress = // TODO Write Helper
-	const path = `/json?address=${''}`;
+async function getCoordinates(locationInfo, googleMapsConnector) {
+	const formattedAddress = formatAddress(locationInfo);
+	console.log(formattedAddress);
+	const path = `/json?address=${formattedAddress}`;
 	const response = await googleMapsConnector.get(path);
 
 
@@ -12,5 +15,5 @@ async function getCoorindates(locationInfo, googleMapsConnector) {
 }
 
 module.exports = {
-	getCoorindates
+	getCoordinates
 };

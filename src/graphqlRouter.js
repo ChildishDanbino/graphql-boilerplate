@@ -1,7 +1,7 @@
 const Router = require('koa-router');
 const { makeExecutableSchema } = require('graphql-tools');
 const { graphqlKoa } = require('graphql-server-koa');
-const { resolvers, typeDefs } = require('./schema');
+const { resolvers, typeDefs  } = require('./schema');
 
 const { credentials } = require('../config');
 const { GoogleMapsConnector } = require('./connectors');
@@ -11,6 +11,7 @@ const schema = makeExecutableSchema({
 	resolvers,
 	typeDefs
 });
+
 const endpointURL = '/graphql';
 
 router.all(endpointURL, graphqlKoa((ctx) => {
