@@ -14,7 +14,7 @@ const configuration = {
 		strictSSL: !PROXY_PORT,
 		timeout: 30 * 1000,
 		headers: {
-			'user-agent': 'mm-sysco-graph'
+			'user-agent': 'graph-boil'
 		}
 	},
 	loggingDefaults: {

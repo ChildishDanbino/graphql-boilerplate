@@ -12,6 +12,6 @@ app.use(graphqlRouter.routes());
 app.use(graphqlRouter.allowedMethods());
 
 app.listen(PORT);
-console.log(`🚀  sysco-graph is listening on port ${PORT} 🚀`); // eslint-disable-line
+console.log(`🚀 graph is listening on port ${PORT} 🚀`); // eslint-disable-line
 
 module.exports = app;
