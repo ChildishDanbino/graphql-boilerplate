@@ -28,3 +28,5 @@ query getCoordinates {
   }
 }
 ```
+
+[Interested in contributing?](https://github.com/Daadler6/graphql-boilerplate/blob/master/CONTRIBUTING.md)
